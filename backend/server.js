@@ -6,6 +6,7 @@ const express = require("express");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const top50_data = require("./data/top50.js").top50_data; // note: it's actually only 15 waiting for the file update
+
 top50_data.sort((a, b) => {
   return a.rank - b.rank;
 });
